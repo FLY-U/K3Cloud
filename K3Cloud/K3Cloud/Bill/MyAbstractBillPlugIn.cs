@@ -46,7 +46,7 @@ namespace K3Cloud.Bill
                     #endregion
                     #region 执行数据库操作
                     str.Clear();//清除内容
-                    str.Append("SELECT * FROM TABLE");//添加SQL语句，可以是存储过程
+                    str.Append("SELECT * FROM TABLES");//添加SQL语句，可以是存储过程
                     using (IDataReader reader = DBServiceHelper.ExecuteReader(this.View.Context, str.ToString()))
                     {
                         while (reader.Read())
