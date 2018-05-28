@@ -3,3 +3,7 @@
 > git pull --rebase origin master
 ## 将本地的项目push 到GitHub上
 > git push -u origin master
+## 创建分支
+> git checkout -b develop
+## 查看当前分支
+> git branch
