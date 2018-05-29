@@ -45,19 +45,19 @@ namespace K3Cloud.Bill
                     //this.View.ShowErrMessage("错误内容","错误标题",Kingdee.BOS.Core.DynamicForm.MessageBoxType.Error);
                     #endregion
                     #region 执行数据库操作
-                    str.Clear();//清除内容
-                    str.Append("SELECT * FROM TABLES");//添加SQL语句，可以是存储过程
-                    using (IDataReader reader = DBServiceHelper.ExecuteReader(this.View.Context, str.ToString()))
-                    {
-                        while (reader.Read())
-                        {
-                            /*
-                            通过reader[0] 通过数组下标的方式
-                            通过reader["SQL中的字段名"]方式
-                            获取数据库中的数据，并将获取的数据赋值到变量里  
-                         */
-                        }
-                    }
+                    //str.Clear();//清除内容
+                    //str.Append("SELECT * FROM TABLES");//添加SQL语句，可以是存储过程
+                    //using (IDataReader reader = DBServiceHelper.ExecuteReader(this.View.Context, str.ToString()))
+                    //{
+                    //    while (reader.Read())
+                    //    {
+                    //        /*
+                    //        通过reader[0] 通过数组下标的方式
+                    //        通过reader["SQL中的字段名"]方式
+                    //        获取数据库中的数据，并将获取的数据赋值到变量里  
+                    //     */
+                    //    }
+                    //}
                     #endregion
                     break;
             }
