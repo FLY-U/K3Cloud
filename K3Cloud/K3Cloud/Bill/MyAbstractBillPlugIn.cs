@@ -9,12 +9,27 @@ using Kingdee.BOS.Orm.DataEntity;
 using Kingdee.BOS.ServiceHelper;
 
 using System.Data;
+using K3Cloud.Utils;
 
 namespace K3Cloud.Bill
 {
     public class MyAbstractBillPlugIn: AbstractBillPlugIn//引入金蝶Kingdee.BOS.Core里的类AbstractBillPlugIn
     {
+        
+        BillPlugInUtils bill = new BillPlugInUtils();
+        MyAbstractBillPlugIn myBill;
         StringBuilder str = new StringBuilder();//使用StringBuilder 拼接字符串
+        /// <summary>
+        /// 方法说明
+        /// </summary>
+        /// <param name="e"></param> 参数
+        /// <Author></Author> 创建人
+        /// <CreateDate></CreateDate> 创建日期
+        /// <RevisionHistory>
+        ///     <ModifyBy></ModifyBy> 修改人
+        ///     <ModifyDate></ModifyDate> 修改日期
+        ///     <ModifyReason></ModifyReason> 修改理由
+        /// </RevisionHistory>
         public override void ButtonClick(ButtonClickEventArgs e)//重写ButtonClick方法
         {
             base.ButtonClick(e);
@@ -28,6 +43,8 @@ namespace K3Cloud.Bill
                     #region 字段的取值赋值
                     //获取普通字段的值
                     this.View.Model.GetValue("字段标识");
+                    
+                    bill.GetValueOfString(myBill, "字段标识");
                     //三元式写法
                     string fbillno = this.View.Model.GetValue("FBillNo") == null ? "" : this.View.Model.GetValue("FBillNo").ToString();
                     //获取基础资料的ID的值,其中DynamicObject引入自Kingdee.BOS.Orm.DataEntity包
